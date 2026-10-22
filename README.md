@@ -1,27 +1,21 @@
-# RakshaBand — Women’s Safety Bracelet (Software Demo)
+# RakshaBand — Professional Software Demo
 
-A responsive HTML/CSS/JavaScript prototype for exploring the RakshaBand software experience before physical components are available.
+A responsive student prototype for the RakshaBand women's safety bracelet. Built with HTML, CSS and vanilla JavaScript.
 
 ## Run locally
-1. Download and extract this project.
-2. Open `index.html` in a modern browser.
-3. Hold the SOS button for 2 seconds to simulate an alert.
-4. Use **Get my location** and grant browser permission to test opt-in location retrieval.
+Open `index.html` in a modern browser, or use VS Code with Live Server. For geolocation, serve via localhost or HTTPS and grant browser permission.
 
-For more reliable geolocation, serve the files through localhost or HTTPS. Some browsers restrict location access when opening a file directly.
+## Demo features
+- Hold SOS for two seconds to simulate an alert
+- Optional browser geolocation (not shared with anyone)
+- Add/remove trusted contacts stored in this browser's local storage
+- Local activity history and alert counter
+- Responsive dashboard and light/dark appearance toggle
 
-## Included demo features
-- Hold-to-activate simulated SOS button
-- Browser geolocation permission flow
-- Add/remove trusted contacts (stored in browser localStorage)
-- Local demo alert history
-- Responsive layout for mobile and desktop
+## Important
+This is a software simulation only. It does not send SMS/calls, contact emergency services, or connect to a physical bracelet. Contact data and activity are stored locally in the browser. Do not use this prototype as a real emergency service.
 
-## Important limitations
-This is a **software demo only**. It does not contact emergency services, send SMS or calls, share location with contacts, or control a physical bracelet. Contact information and demo history stay in the browser's local storage. Do not use this prototype as an actual safety service.
-
-## Next development steps
-- Connect a tested ESP32 firmware/hardware prototype.
-- Design a secure backend and authentication.
-- Add a verified notification provider and explicit consent.
-- Perform safety, privacy, and reliability testing before any real-world use.
+## Roadmap
+1. Test the UI and browser permission flow.
+2. Integrate tested ESP32 hardware and driver circuitry.
+3. Design a secure, consent-based notification backend and validate it thoroughly before real-world use.
