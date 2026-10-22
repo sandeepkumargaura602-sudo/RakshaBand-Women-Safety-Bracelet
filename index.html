@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#111827" />
+  <title>RakshaBand | Safety Companion Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">R</span><span>RakshaBand<small>SAFETY COMPANION</small></span></a>
+    <span class="demo-pill"><span></span> SOFTWARE DEMO</span>
+  </header>
+
+  <main class="shell">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">YOUR SAFETY, ONE TAP AWAY</p>
+        <h1>Feel safer.<br><span>Stay connected.</span></h1>
+        <p class="intro">A software prototype for the RakshaBand women’s safety bracelet. Test the SOS flow, location permission, and trusted-contact list before connecting real hardware.</p>
+        <div class="hero-tags"><span>● SOS DEMO</span><span>● LOCATION OPT-IN</span><span>● CONTACTS</span></div>
+      </div>
+      <div class="hero-emblem" aria-hidden="true"><div class="ring ring-one"></div><div class="ring ring-two"></div><div class="shield">♡</div><span class="emblem-dot dot-a"></span><span class="emblem-dot dot-b"></span></div>
+    </section>
+
+    <section class="notice"><strong>Demo mode:</strong> This website does not contact emergency services, send SMS/calls, or activate a physical bracelet. Use it for demonstration only—not as a real safety service.</section>
+
+    <section class="dashboard">
+      <div class="panel sos-panel">
+        <div class="panel-heading"><div><p class="eyebrow">EMERGENCY CONTROL</p><h2>Need help?</h2></div><span class="status-chip" id="statusChip">SYSTEM READY</span></div>
+        <p class="muted">Press and hold the button for 2 seconds to simulate an SOS alert.</p>
+        <div class="sos-wrap"><button id="sosButton" class="sos-button" aria-label="Hold to simulate SOS"><span class="sos-icon">!</span><strong>SOS</strong><small>HOLD 2 SECONDS</small></button></div>
+        <div class="progress-track"><div id="holdProgress"></div></div>
+        <p class="hold-hint" id="holdHint">Press and hold to start the demo alert.</p>
+        <div class="button-row"><button class="btn secondary" id="resetButton">Reset demo</button><button class="btn primary" id="locationButton">Get my location</button></div>
+        <div class="location-box"><div class="location-icon">⌖</div><div><strong>Current location</strong><p id="locationText">Location not requested</p></div></div>
+      </div>
+
+      <div class="panel contacts-panel">
+        <div class="panel-heading"><div><p class="eyebrow">YOUR SUPPORT CIRCLE</p><h2>Trusted contacts</h2></div><span class="count-badge" id="contactCount">2 saved</span></div>
+        <p class="muted">Demo contacts are stored in this browser only.</p>
+        <form id="contactForm" class="contact-form">
+          <label>Name<input id="contactName" type="text" placeholder="e.g. A trusted friend" maxlength="40" required /></label>
+          <label>Phone number<input id="contactPhone" type="tel" placeholder="e.g. 98765 43210" maxlength="20" required /></label>
+          <button class="btn primary full" type="submit">+ Add contact</button>
+        </form>
+        <div id="contactList" class="contact-list"></div>
+      </div>
+    </section>
+
+    <section class="panel history-panel">
+      <div class="panel-heading"><div><p class="eyebrow">ACTIVITY LOG</p><h2>Demo alert history</h2></div><button class="text-button" id="clearHistory">Clear history</button></div>
+      <div id="historyList" class="history-list"><div class="empty-state">No demo alerts yet. Try the SOS button above.</div></div>
+    </section>
+
+    <section class="next-steps">
+      <div><p class="eyebrow">ROADMAP</p><h2>From demo to device</h2><p class="muted">Build the software first, then integrate and test the physical bracelet.</p></div>
+      <div class="roadmap-item"><span>01</span><div><strong>Software prototype</strong><p>Interactive SOS, opt-in location and local contacts.</p></div><b class="done">DEMO</b></div>
+      <div class="roadmap-item"><span>02</span><div><strong>ESP32 integration</strong><p>Button, buzzer and vibration driver circuitry.</p></div><b>PLANNED</b></div>
+      <div class="roadmap-item"><span>03</span><div><strong>Real notifications</strong><p>Secure backend and tested messaging integration.</p></div><b>PLANNED</b></div>
+    </section>
+
+    <footer><div class="brand footer-brand"><span class="brand-mark">R</span><span>RakshaBand<small>PROTOTYPE PROJECT</small></span></div><p>Designed as a student prototype. Not a replacement for emergency services.</p><a href="https://github.com/sandeepkumargaura602-sudo/RakshaBand-Women-Safety-Bracelet" target="_blank" rel="noreferrer">View GitHub project ↗</a></footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
